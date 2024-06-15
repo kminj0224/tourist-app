@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Spots in China</title>
+  <style>
+    body {
+      font-family: 'Noto Serif SC', serif; /* 중국어 서체 사용 */
+      background: url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDM3M3wwfDF8c2VhcmNofDR8fGNoaW5hfGVufDB8fHx8MTYxNzA1OTg3OQ&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed; /* 중국풍 배경 이미지 */
+      background-size: cover;
+      color: #fff; /* 텍스트 색상 흰색 */
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #FFD700; /* 금색 */
+      background-color: rgba(0, 0, 0, 0.6); /* 반투명 검은색 배경 */
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: rgba(255, 0, 0, 0.6); /* 반투명 빨간색 배경 */
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    li strong {
+      color: #FFD700; /* 금색 */
+    }
+    li span {
+      display: block;
+      font-size: 0.9em;
+    }
+  </style>
+  <!-- 구글 폰트 Noto Serif SC (중국어 서체) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Tourist Spots in China</h1>
+  <ul>
+    <% spots.forEach(spot => { %>
+      <li>
+        <strong><%= spot.name %></strong>
+        <span><%= spot.location %></span>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
